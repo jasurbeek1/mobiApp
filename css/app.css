@@ -1,0 +1,381 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(152, 255, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background: #666;
+  border-radius: 50px;
+}
+.box .logo {
+  position: absolute;
+  top: 40%;
+  left: 39%;
+  z-index: 9999;
+  width: 70px;
+  color: #fff;
+  opacity: 1;
+  transition: 0.5s;
+  display: none;
+}
+.box .inner {
+  position: absolute;
+  inset: 3px;
+  background: url(../img/iphon.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 48px;
+  border: 10px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.9s;
+}
+.box .inner .timer {
+  position: absolute;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box .inner .timer .data-hours {
+  color: #fff;
+}
+.box .inner .timer .data-day {
+  color: #fff;
+}
+.box .inner .box-app {
+  margin-top: 120px;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  flex-wrap: wrap;
+  display: none;
+}
+.box .inner .box-app button {
+  background-color: transparent;
+  border: none;
+}
+.box .inner .box-app button img {
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.box .inner .box-app button img:hover {
+  width: 70px;
+}
+.box .inner .box-app_footer {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.box .inner .box-app_footer .bg-opacity {
+  position: absolute;
+  bottom: -14%;
+  background-color: #000;
+  width: 100%;
+  height: 80px;
+  opacity: 0.3;
+  border-radius: 15px;
+  display: none;
+}
+.box .inner .box-app_footer button:hover.bg-opacity {
+  height: 100px;
+}
+.box .inner .box-app_footer button {
+  background-color: transparent;
+  display: none;
+  border: 0;
+  z-index: 9999;
+}
+.box .inner .box-app_footer button #messages {
+  z-index: 9999;
+  width: 55px;
+  transition: 0.5s;
+}
+.box .inner .box-app_footer button #messages:hover {
+  width: 70px;
+}
+.box .inner .box-app_footer button #calculator {
+  background-color: transparent;
+}
+.box .inner .box-app_footer button img {
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.5s;
+}
+.box .inner .box-app_footer button img:hover {
+  width: 70px;
+}
+.box .inner .colculator {
+  width: 100%;
+  display: block;
+}
+.box .inner .colculator .result {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #fff;
+  height: 39%;
+  padding-bottom: 8px;
+  height: 140px;
+  margin-top: 20px;
+  padding: 0 20px;
+  background-color: black;
+}
+.box .inner .colculator #panelCalculator {
+  background-color: transparent;
+  text-align: end;
+  color: #fff;
+  font-size: 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+  justify-self: flex-end;
+  height: 30%;
+}
+.box .inner .colculator .buttuns {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 0%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.box .inner .colculator .buttuns .number, .box .inner .colculator .buttuns .comma {
+  background-color: #494949;
+  font-size: 20px;
+}
+.box .inner .colculator .buttuns .item1 {
+  color: #000;
+  font-size: 20px;
+  background-color: rgb(172, 172, 172);
+}
+.box .inner .colculator .buttuns .item3 {
+  background-color: orange;
+  font-size: 20px;
+}
+.box .inner .colculator .itemCalculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  outline: none;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.box .inner .colculator .itemZero {
+  width: 115px;
+  border-radius: 20px;
+}
+.box .inner .colculator .back {
+  border: none;
+  outline: none;
+}
+.box .inner .colculator #backBtn {
+  position: absolute;
+  bottom: 0;
+  left: 44%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 40px;
+}
+.box .inner .btn {
+  position: absolute;
+  top: 110px;
+  left: -2px;
+  width: 3px;
+  height: 26px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background: radial-gradient(#ccc, #666, #000);
+  z-index: -1;
+}
+.box .inner .btn.btn2 {
+  top: 160px;
+  height: 40px;
+}
+.box .inner .btn.btn3 {
+  top: 220px;
+  height: 40px;
+}
+.box .inner .righSideBtn {
+  position: absolute;
+  top: 170px;
+  right: -2px;
+  width: 3px;
+  height: 70px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: radial-gradient(#ccc, #666, #000);
+  z-index: -1;
+}
+.box .inner .island_popup {
+  position: absolute;
+  top: 10px;
+  width: 90px;
+  height: 25px;
+  background: #000;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.box .inner .island_popup:hover {
+  width: 200px;
+  height: 25px;
+}
+.box .inner .box-app {
+  position: absolute;
+  z-index: 9999;
+}
+.box .hide {
+  display: none;
+}
+.box .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  width: 90%;
+  height: 90%;
+  max-width: 31.25em;
+  padding: 3.12em 5em;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 1em;
+  border-radius: 40px;
+}
+.box .wrapper .timer-display {
+  font-size: 2.18em;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  margin-top: 70px;
+}
+.box .wrapper .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.box .wrapper .inputs input {
+  width: 2.8em;
+  font-size: 1.3em;
+  border: 1px solid #000000;
+  border-radius: 0.3em;
+  padding: 0.4em 0.2em;
+}
+.box .wrapper #set {
+  position: absolute;
+  left: 12%;
+  bottom: 35%;
+  background-color: #377dff;
+  border: none;
+  padding: 0.9em 1.8em;
+  width: 200px;
+  display: block;
+  margin: 1.5em auto 0 auto;
+  border-radius: 2em;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.box .wrapper .alarm {
+  display: grid;
+  grid-template-columns: 8fr 2fr 2fr;
+  gap: 1em;
+  margin-top: 1.5em;
+  align-items: center;
+  border-bottom: 1px solid #898f9b;
+  padding-bottom: 0.6em;
+}
+.box .wrapper .alarm span {
+  width: 50px;
+}
+.box .wrapper .alarm input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 2em;
+  width: 3.75em;
+  background-color: #e2e2ec;
+  border-radius: 1.25em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+.box .wrapper .alarm input[type=checkbox]:before {
+  position: absolute;
+  content: "";
+  background-color: #757683;
+  height: 1.43em;
+  width: 1.43em;
+  border-radius: 50%;
+  top: 0.25em;
+  left: 0.25em;
+}
+.box .wrapper .alarm input[type=checkbox]:checked {
+  background-color: #d2e2ff;
+}
+.box .wrapper .alarm input[type=checkbox]:checked:before {
+  background-color: #377dff;
+  left: 2em;
+}
+.box .wrapper .deleteButton {
+  background-color: transparent;
+  font-size: 1.5em;
+  color: #377dff;
+  border: none;
+  cursor: pointer;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background-color: #000;
+  border-radius: 48px;
+}
+
+.box:hover .inner {
+  opacity: 1;
+}
+
+.box:hover .logo {
+  opacity: 0;
+  z-index: -9;
+}/*# sourceMappingURL=app.css.map */
